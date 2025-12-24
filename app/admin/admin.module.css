@@ -1,0 +1,168 @@
+.adminContainer {
+    padding-top: 120px;
+    min-height: 100vh;
+}
+
+.tabs {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.inactiveTab {
+    background: transparent;
+    border: 2px solid #ddd;
+    color: #666;
+}
+
+.formCard {
+    padding: 2rem;
+    border-radius: 16px;
+    max-width: 600px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.formGroup label {
+    font-weight: 600;
+    color: #333;
+}
+
+.formGroup input,
+.formGroup textarea,
+.formGroup select {
+    padding: 0.75rem 1rem;
+    border: 2px solid #e5e5e5;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus,
+.formGroup select:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.formGroup textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Dashboard Styles */
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.statCard {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.statCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.statNumber {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #667eea;
+}
+
+.statLabel {
+    display: block;
+    font-size: 1rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.actionBtn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #1a1a1a;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.actionBtn:hover {
+    background: #333;
+}
+
+/* Table Styles */
+.table {
+    width: 100%;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.table th,
+.table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.table th {
+    background: #f9f9f9;
+    font-weight: 600;
+    color: #333;
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+.tableActions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.editBtn,
+.deleteBtn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: opacity 0.2s;
+}
+
+.editBtn {
+    background: #667eea;
+    color: white;
+}
+
+.deleteBtn {
+    background: #ef4444;
+    color: white;
+}
+
+.editBtn:hover,
+.deleteBtn:hover {
+    opacity: 0.9;
+}

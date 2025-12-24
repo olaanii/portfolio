@@ -1,0 +1,64 @@
+.section {
+    padding: 8rem 0;
+    position: relative;
+    /* Hero warm glow + subtle mesh */
+    background:
+        radial-gradient(ellipse 120% 100% at 50% 0%, rgba(255, 225, 160, 0.4) 0%, rgba(255, 255, 255, 0) 70%),
+        radial-gradient(at 0% 0%, hsla(253, 16%, 7%, 0.05) 0, transparent 50%),
+        radial-gradient(at 100% 0%, hsla(339, 49%, 30%, 0.05) 0, transparent 50%);
+}
+
+.header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 5rem;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    /* Gradient text */
+    background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 3rem;
+}
+
+.emptyState {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    color: #666;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 6rem 0;
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .grid {
+        gap: 2rem;
+        grid-template-columns: 1fr;
+    }
+}

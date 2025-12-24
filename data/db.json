@@ -1,0 +1,26 @@
+{
+  "projects": [
+    {
+      "id": "1",
+      "title": "Portfolio Website",
+      "description": "A personal portfolio built with Next.js and Flutter.",
+      "imageUrl": "https://placehold.co/600x400/1a1a1a/ffffff?text=Portfolio",
+      "technologies": ["Next.js", "Flutter", "TypeScript"],
+      "link": "https://github.com"
+    }
+  ],
+  "skills": [
+    {
+      "id": "1",
+      "name": "Next.js",
+      "category": "Frontend",
+      "proficiency": 90
+    },
+    {
+      "id": "2",
+      "name": "Flutter",
+      "category": "Mobile",
+      "proficiency": 85
+    }
+  ]
+}

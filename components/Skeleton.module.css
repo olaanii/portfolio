@@ -1,0 +1,52 @@
+.skeletonCard {
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+    height: 450px;
+}
+
+.skeletonImage {
+    height: 70%;
+    background: linear-gradient(90deg,
+            rgba(0, 0, 0, 0.05) 25%,
+            rgba(0, 0, 0, 0.08) 37%,
+            rgba(0, 0, 0, 0.05) 63%);
+    background-size: 400% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+.skeletonContent {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.skeletonTitle {
+    width: 60%;
+    height: 24px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}
+
+.skeletonTags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.skeletonTag {
+    width: 60px;
+    height: 18px;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 10px;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}

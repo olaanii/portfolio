@@ -1,0 +1,51 @@
+.footer {
+    background: #000;
+    color: #fff;
+    padding: 6rem 0 2rem;
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    font-family: var(--font-playfair);
+    margin-bottom: 2rem;
+}
+
+.email {
+    font-size: 1.5rem;
+    color: #999;
+    transition: color 0.3s;
+    margin-bottom: 4rem;
+    display: inline-block;
+}
+
+.email:hover {
+    color: #fff;
+}
+
+.bottom {
+    border-top: 1px solid #333;
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.socials {
+    display: flex;
+    gap: 1rem;
+}
+
+.socialLink {
+    color: #fff;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .bottom {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}

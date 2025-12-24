@@ -1,0 +1,319 @@
+.hero {
+    position: relative;
+    padding-top: 100px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    /* Elliptical gradient to stretch spanning the width ("curved from left to right") */
+    background: radial-gradient(ellipse 120% 80% at 50% 30%, rgba(255, 225, 160, 0.8) 0%, rgba(255, 255, 255, 0) 70%);
+}
+
+.glow {
+    /* Kept for potential extra effects, but radial gradient on .hero helps */
+    display: none;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    min-height: 800px;
+    /* Ensure space for vertical layout */
+}
+
+/* Base positions for larger screens */
+.greetingLeft {
+    position: absolute;
+    top: 120px;
+    right: calc(50% + 140px);
+    /* Pushed out to clear the head */
+    font-family: var(--font-cormorant);
+    font-style: italic;
+    font-size: 8rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    opacity: 0.95;
+    z-index: 1;
+    white-space: nowrap;
+    letter-spacing: -3px;
+}
+
+.greetingRight {
+    position: absolute;
+    top: 120px;
+    left: calc(50% + 140px);
+    /* Pushed out to clear the head */
+    font-family: var(--font-cormorant);
+    font-style: italic;
+    font-size: 8rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    opacity: 0.95;
+    z-index: 1;
+    white-space: nowrap;
+    letter-spacing: -3px;
+}
+
+.imageContainer {
+    position: absolute;
+    bottom: 150px;
+    /* Moved up 50px */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    width: 550px;
+    /* Reduced width */
+    height: 650px;
+    /* Reduced height */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.personImage {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    /* Alpha mask for seamless blend */
+    mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+}
+
+.badge {
+    position: absolute;
+    top: 350px;
+    /* Aligned with design */
+    left: 5%;
+    /* Relative to container */
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #fff;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--secondary);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: #ff9f43;
+    border-radius: 50%;
+}
+
+.nameWrapper {
+    position: absolute;
+    top: 450px;
+    left: 5%;
+    z-index: 3;
+    line-height: 0.85;
+}
+
+.iam {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #000;
+    margin-bottom: 0px;
+    letter-spacing: -1px;
+}
+
+.olani {
+    font-size: 8.5rem;
+    /* Massive impact */
+    font-weight: 900;
+    color: #000;
+    text-transform: uppercase;
+    margin-left: -5px;
+    letter-spacing: -3px;
+}
+
+.description {
+    position: absolute;
+    top: 350px;
+    right: 5%;
+    z-index: 3;
+    text-align: left;
+    /* Design has it left aligned relative to itself, floating right */
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #4a4a4a;
+    max-width: 220px;
+    font-weight: 600;
+}
+
+.roleWrapper {
+    position: absolute;
+    top: 500px;
+    /* Aligned horizontally with I AM OLANI roughly */
+    right: 5%;
+    z-index: 3;
+    text-align: left;
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 0.9;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    max-width: 300px;
+}
+
+/* Mobile Responsiveness & Animation */
+@media (max-width: 1024px) {
+    .hero {
+        min-height: 0;
+        /* Remove min-height constraint */
+        height: 100dvh;
+        /* Exact viewport height */
+        padding: 0;
+        /* Remove padding */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        /* Align content to bottom conceptually */
+        overflow: hidden;
+        /* No scrolling */
+    }
+
+    .container {
+        display: block;
+        /* Switch to block for absolute positioning context */
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        position: relative;
+    }
+
+    /* Base state for animated elements on mobile */
+    .greetingLeft,
+    .greetingRight,
+    .badge,
+    .imageContainer,
+    .nameWrapper,
+    .description,
+    .roleWrapper {
+        position: absolute;
+        /* Stack everything in center initially */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        /* Hidden by default */
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        width: auto;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    /* Animation States */
+
+    /* Reveal Class */
+    .mobileAnimateIn {
+        opacity: 1;
+        z-index: 10;
+    }
+
+    /* Hide/Fade Out Class */
+    .mobileAnimateOut {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    /* Final Layout State - Poster Style */
+    .mobileAnimateFinal {
+        opacity: 1;
+        /* transform: none;  <-- Don't reset transform universally, specific elements need specific transforms */
+    }
+
+    /* Image: Fixed at bottom, filling width/height partially */
+    .imageContainer.mobileAnimateFinal {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 500px;
+        height: 80vh;
+        /* Takes up most of the screen height */
+        margin: 0;
+        z-index: 1;
+        display: flex;
+        align-items: flex-end;
+        pointer-events: none;
+        /* Let clicks pass through if needed */
+    }
+
+    /* Name: Overlaid on top of image, big and bold */
+    .nameWrapper.mobileAnimateFinal {
+        position: absolute;
+        bottom: 120px;
+        /* Adjust based on image chin */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        text-align: center;
+        z-index: 2;
+    }
+
+    .nameWrapper.mobileAnimateFinal .iam {
+        font-size: 3rem;
+        margin-bottom: -10px;
+    }
+
+    .nameWrapper.mobileAnimateFinal .olani {
+        font-size: 6rem;
+    }
+
+    /* Role: Below name or at very bottom */
+    .roleWrapper.mobileAnimateFinal {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        text-align: center;
+        z-index: 2;
+        font-size: 1.5rem;
+    }
+
+    .description.mobileAnimateFinal {
+        position: absolute;
+        top: 120px;
+        right: 20px;
+        text-align: right;
+        font-size: 0.8rem;
+        z-index: 2;
+    }
+
+    /* Adjust sizing for the single-element views */
+    .badge.mobileAnimateIn {
+        transform: translate(-50%, -50%) scale(1.2);
+        /* Make it pop */
+    }
+
+    .greetingLeft.mobileAnimateIn,
+    .greetingRight.mobileAnimateIn {
+        font-size: 4rem;
+        /* Adjust for mobile width */
+        width: 100%;
+        text-align: center;
+    }
+
+    .greetingLeft.mobileAnimateIn {
+        margin-bottom: 60px;
+        /* Stack Hey above There if simultaneous */
+        /* Actually they are separate divs. Overlapping might be weird. Let's stack them or show together. */
+        /* If both are visible, let's nudge them */
+        transform: translate(-50%, -100%);
+    }
+
+    .greetingRight.mobileAnimateIn {
+        transform: translate(-50%, 0%);
+    }
+}
