@@ -1,26 +1,37 @@
 {
   "projects": [
     {
-      "id": "1",
-      "title": "Portfolio Website",
-      "description": "A personal portfolio built with Next.js and Flutter.",
-      "imageUrl": "https://placehold.co/600x400/1a1a1a/ffffff?text=Portfolio",
-      "technologies": ["Next.js", "Flutter", "TypeScript"],
-      "link": "https://github.com"
-    }
-  ],
-  "skills": [
-    {
-      "id": "1",
-      "name": "Next.js",
-      "category": "Frontend",
-      "proficiency": 90
+      "id": "veyra",
+      "title": "Veyra",
+      "description": "An AI-assisted workbench that turns a project brief into architecture, technology options, and actionable implementation tasks.",
+      "imageUrl": null,
+      "technologies": ["TypeScript", "JavaScript", "AI"],
+      "link": "https://github.com/olaanii/veyra"
     },
     {
-      "id": "2",
-      "name": "Flutter",
-      "category": "Mobile",
-      "proficiency": 85
+      "id": "afan-oromo-language",
+      "title": "Afan Oromo Programming Language",
+      "description": "A beginner language that translates Afan Oromo source files into Python through a lexer, parser, type checker, and code generator.",
+      "imageUrl": null,
+      "technologies": ["Python", "Compiler"],
+      "link": "https://github.com/olaanii/afan-oromo-PL"
+    },
+    {
+      "id": "fluxx-nft-marketplace",
+      "title": "FLUXX NFT Marketplace",
+      "description": "A Sepolia testnet NFT minting and marketplace project with tiered rarity, wallet connection, and IPFS-hosted metadata.",
+      "imageUrl": null,
+      "technologies": ["Next.js", "TypeScript", "Solidity", "IPFS"],
+      "link": "https://github.com/olaanii/Fluxx---NFT-Minting-and-Marketplace"
+    },
+    {
+      "id": "birr-blockchain",
+      "title": "BIRR Blockchain",
+      "description": "A Go blockchain prototype with delegated authority consensus, peer-to-peer networking, a custom VM, and a JSON-RPC API.",
+      "imageUrl": null,
+      "technologies": ["Go", "Dart", "Docker"],
+      "link": "https://github.com/olaanii/birr"
     }
-  ]
+  ],
+  "skills": []
 }

@@ -1,26 +1,18 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display, Dancing_Script, Cormorant_Garamond } from "next/font/google";
+import { JetBrains_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/Providers";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
-const dancing = Dancing_Script({ subsets: ["latin"], variable: "--font-dancing" });
-const cormorant = Cormorant_Garamond({
-  subsets: ["latin"],
-  variable: "--font-cormorant",
-  weight: ["300", "400", "500", "600", "700"],
-  style: ["normal", "italic"]
-});
+const serif = Playfair_Display({ subsets: ["latin"], variable: "--font-serif" });
+const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
-  title: "Olani | Software Developer & Designer",
-  description: "Crafting digital experiences that bridge the gap between complex logic and elegant design.",
+  title: "Olani Shambel — Flutter Developer",
+  description: "Olani Shambel is a Flutter developer building cross-platform apps and exploring Web3 and AI.",
   openGraph: {
-    title: "Olani | Portfolio",
-    description: "Full Stack Developer specializing in React, Next.js, and Flutter.",
-    url: "https://your-domain.com",
-    siteName: "Olani Portfolio",
+    title: "Olani Shambel — Portfolio",
+    description: "Flutter developer · Web3 and AI. Selected work, stack, and open-source projects.",
+    siteName: "Olani Shambel",
     locale: "en_US",
     type: "website",
   },
@@ -33,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${playfair.variable} ${dancing.variable} ${cormorant.variable}`}>
+      <body className={`${serif.variable} ${mono.variable}`}>
         <Providers>
           {children}
         </Providers>

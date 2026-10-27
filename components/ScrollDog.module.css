@@ -1,0 +1,8 @@
+.progress{position:fixed;z-index:30;left:0;right:0;bottom:0;height:8px;border-top:1px solid var(--border);background:var(--background);pointer-events:none}
+.track{position:relative;height:100%;background:repeating-linear-gradient(135deg,var(--border) 0 1px,transparent 1px 6px)}
+.fill{position:relative;height:100%;background:var(--foreground);transition:width 80ms linear}
+.dog{position:absolute;width:76px;height:47px;right:-39px;bottom:0;background-image:url('/dog-sprite.png');background-repeat:no-repeat;background-size:256px 191px;background-position:-93px -8px;mix-blend-mode:screen;transform-origin:50% 100%}
+:global(.light) .dog{mix-blend-mode:multiply}
+.walking{animation:step .16s ease-in-out infinite alternate}
+@keyframes step{from{transform:translateY(0) rotate(-2deg) scaleY(1.02)}to{transform:translateY(-3px) rotate(2deg) scaleY(.97)}}
+@media(prefers-reduced-motion:reduce){.walking{animation:none}}
