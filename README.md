@@ -21,3 +21,5 @@ The page is served at [http://localhost:3000](http://localhost:3000). The public
 ## Stack
 
 Next.js, React, TypeScript, CSS Modules, next-themes, and Lenis. Profile artwork and the existing dog sprite are stored in `public/`.
+
+`profile/README.md` contains the matching GitHub profile README draft. GitHub displays it on the profile when it is copied to a repository named `olaanii/olaanii`.
